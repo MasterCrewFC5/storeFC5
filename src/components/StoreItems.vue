@@ -14,8 +14,8 @@
       <td>{{ item.value }}</td>
       <td>{{ item.description }}</td>
       <td><PayPal
-        amount="10.00"
-        currency="USD"
+        :amount="item.value"
+        currency="EUR"
         :client="credentials"
         env="sandbox">
       </PayPal></td>
