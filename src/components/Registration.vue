@@ -1,5 +1,5 @@
 <template>
-  <b-alert :variant="variant" show>{{  }}</b-alert>
+  <b-alert :variant="variant" show>{{ msg }}</b-alert>
 </template>
 
 <script>
