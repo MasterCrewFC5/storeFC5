@@ -17,7 +17,8 @@
         :amount="item.value"
         currency="EUR"
         :client="credentials"
-        env="sandbox">
+        env="sandbox"
+        v-on:payment-authorized="payment">
       </PayPal></td>
     </tr>
     </tbody>
@@ -46,6 +47,11 @@
         .catch(e => {
           this.errors.push(e)
         })
+    },
+    methods: {
+      payment: function (event) {
+        console.log(event)
+      }
     },
     components: {
       PayPal
