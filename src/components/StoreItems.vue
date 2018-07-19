@@ -45,6 +45,9 @@
           this.items = response.data.result.items
         })
         .catch(e => {
+          // console.log(localStorage.token)
+          this.$http.defaults.headers.common['Authorization'] = 'Bearer ' + localStorage.token
+          // console.log(this.$http.defaults.headers.common['Authorization'])
           this.errors.push(e)
         })
     },
